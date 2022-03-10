@@ -1,14 +1,20 @@
+# importing modules
 from tkinter import W
 from netaddr import IPNetwork
 import sys
 
+# validating arguments
 if len(sys.argv) != 2:
     print("Please Specify file")
     sys.exit(1)
 
+# file data that will be store
 file_data = ""
+# array of prefix's
 prefix_array = []
+# opening the file given in the argument
 with open(sys.argv[1], 'r') as file:
+    # reading the lines in the file
     file_data = file.readlines()
 
 for i in range(len(file_data)):
